@@ -1,0 +1,31 @@
+simone@pollon:~/Documents/sicp$ time scheme --load ex1.22.sch
+MIT/GNU Scheme running under GNU/Linux
+Type `^C' (control-C) followed by `H' to obtain information about interrupts.
+
+Copyright (C) 2019 Massachusetts Institute of Technology
+This is free software; see the source for copying conditions. There is NO warranty; not even for MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE.
+
+Image saved on Thursday September 5, 2019 at 11:51:46 AM
+  Release 10.1.10 || Microcode 15.3 || Runtime 15.7 || SF 4.41 || LIAR/x86-64 4.118
+;Loading "ex1.22.sch"...load ok
+
+10000000000037 10000000000037 time: 1.55
+10000000000051 10000000000051 time: 1.4899999999999998
+10000000000099 10000000000099 time: 1.4799999999999995
+100000000000031 100000000000031 time: 4.6
+100000000000067 100000000000067 time: 4.669999999999998
+100000000000097 100000000000097 time: 4.729999999999997
+1000000000000037 1000000000000037 time: 15.080000000000002
+1000000000000091 1000000000000091 time: 15.060000000000002
+1000000000000159 1000000000000159 time: 15.049999999999997
+
+
+done
+;... aborted
+
+Pulvis et umbra sumus.
+
+real	1m21,079s
+user	1m21,030s
+sys	0m0,032s
