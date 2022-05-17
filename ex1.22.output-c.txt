@@ -1,0 +1,24 @@
+MIT/GNU Scheme running under GNU/Linux
+Type `^C' (control-C) followed by `H' to obtain information about interrupts.
+
+Copyright (C) 2019 Massachusetts Institute of Technology
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Image saved on Thursday September 5, 2019 at 11:51:46 AM
+  Release 10.1.10   || Microcode 15.3 || Runtime 15.7 || SF 4.41
+  LIAR/x86-64 4.118
+;Loading "ex1.22.sch"...load ok
+
+10000000000000061 10000000000000061 time: 45.870000000000005
+10000000000000069 10000000000000069 time: 44.25999999999999
+10000000000000079 10000000000000079 time: 45.650000000000006
+100000000000000003 100000000000000003 time: 140.93
+100000000000000013 100000000000000013 time: 143.5
+100000000000000019 100000000000000019 time: 144.05999999999995
+
+
+done
+;... aborted
+
+Ceterum censeo Carthaginem esse delendam.
