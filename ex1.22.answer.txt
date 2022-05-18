@@ -1,14 +1,14 @@
 The output of the program is in the files named ex1.22.output*.txt.
-
+The primes requested are there.
 
 
 The timings recorded are:
 
-10^13 ~ 1.5 seconds
-10^14 ~ 4.7 seconds
-10^15 ~ 15  seconds
-10^16 ~ 45  seconds
-10^17 ~ 143 seconds
+10^13 ~ 1.5  seconds
+10^14 ~ 4.6  seconds
+10^15 ~ 14.7 seconds
+10^16 ~ 46   seconds
+10^17 ~ 146  seconds
 
 
 Each successive line starts from n*10 so one could expect
@@ -17,8 +17,11 @@ sqrt(10) more time expended for finding the prime.
 sqrt(10) ~ 3.1
 
 Infact the ratio between timings satisfy the hipotesis:
-4.7/1.5 ~ 3.13
-15/4.7  ~ 3.19
-45/15   = 3
-143/45  ~ 3.17
+4.6/1.5  ~ 3.06
+14.7/4.6 ~ 3.19
+46/14.7  = 3.13
+146/46   ~ 3.17
 
+So, yes my result is compatible with the notion that programs on my
+machine run in time proportional to the number of steps required 
+for the computation.
