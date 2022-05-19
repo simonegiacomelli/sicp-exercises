@@ -1,0 +1,10 @@
+Actually it is not confirmed.
+
+The timings (see ex1.23.output.txt) says it takes 2/3 of the time and not half.
+
+This is because the modified version skips even divisor, BUT it is doing so with 
+the cost of an additional call and one if.
+
+I tested it and proved it with ex1.23-start-from-3.sch where I start the divisors
+from 3 and add +2 at each iteration and the timings are actually half than the
+original from ex1.22. :)
