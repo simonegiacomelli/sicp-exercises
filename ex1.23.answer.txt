@@ -7,4 +7,5 @@ the cost of an additional call and one if.
 
 I tested it and proved it with ex1.23-start-from-3.sch where I start the divisors
 from 3 and add +2 at each iteration and the timings are actually half than the
-original from ex1.22. :)
+original from ex1.22, proving that if you verify only odd numbers without additional
+calls the algorithm complexity satisfies the expectations :)
