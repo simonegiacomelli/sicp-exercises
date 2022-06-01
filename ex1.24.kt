@@ -6,21 +6,29 @@ fun main() {
     println("reading $filename")
 
     val lines = File(filename).readLines()
-    var start = ""
-    lines.mapNotNull { line ->
+    var exp = 0
+    val timings = lines.mapNotNull { line ->
         val startCandidate = line.substringAfter("starting from ")
         if (line.startsWith("Looking for ") && startCandidate.isNotBlank())
-            start = "10^${startCandidate.length - 1}"
+            exp = startCandidate.length - 1
 
-        if (line.contains("time: ")) {
+        if (startCandidate.isNotBlank() && line.contains("time: ")) {
             val time = line.substringAfter("time: ")
-            start to time.toDouble()
+            exp to time.toDouble()
         } else null
     }.groupBy(
         keySelector = { it.first },
         valueTransform = { it.second }
     ).mapValues {
-        print(it.key.padEnd(5,' ') + " ")
-        println(it.value.average())
+        it.value.average()
+    }.toList()
+
+    timings.filter { it.first > 1 }.forEachIndexed { index, pair ->
+        print("${pair.first}\t")
+//        print("10^" + pair.first + "\t")
+        print(pair.second)
+        println()
     }
+
+
 }
