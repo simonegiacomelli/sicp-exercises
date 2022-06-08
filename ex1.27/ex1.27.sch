@@ -20,7 +20,7 @@
           (newline)
         )
       )
-      (display "it passed all fermat test with a < n!\n" )      
+      (display "it passed all fermat test with every a < n!\n" )      
     ) 
 )
 
