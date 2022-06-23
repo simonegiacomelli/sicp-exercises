@@ -25,7 +25,7 @@
 (define (exercise n)
   (display "integral of cube with ")
   (display n)
-  (display " iterations is: ")
+  (display " iterations are: ")
   (display (simpson-integral cube 0 1 n))
   (newline)
 )
