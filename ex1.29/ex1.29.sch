@@ -1,0 +1,36 @@
+(define (sum term a next b)
+  (if (> a b)
+    0
+    (+ (term a)
+      (sum term (next a) next b))))
+
+(define (simpson-integral f a b n)
+  (define (add-2 x) (+ x 2))
+  (define (def-h h)
+    (define (term k) (+ a (* k h)))
+    (* (+
+         (term 0)
+         (* 4 (sum term 1 add-2 (- n 1)))
+         (* 2 (sum term 2 add-2 (- n 2)))
+         (term n)
+       )
+      (/ h 3)
+    )
+  )
+  (def-h (/ (- b a) n))
+)
+
+(define (cube x) (* x x x))
+
+(define (exercise n)
+  (display "integral of cube with ")
+  (display n)
+  (display " iterations is: ")
+  (display (simpson-integral cube 0 1 n))
+  (newline)
+)
+(newline)
+(exercise 100)
+(exercise 1000)
+
+(exit)
