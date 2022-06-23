@@ -8,7 +8,7 @@
 
 (define (simpson-integral f a b n)
   (define h (/ (- b a) n))
-  (define (term k) (+ a (* k h)))
+  (define (term k) (f (+ a (* k h))))
   (*
     (/ h 3)
     (+
