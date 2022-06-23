@@ -4,20 +4,20 @@
     (+ (term a)
       (sum term (next a) next b))))
 
+(define (add-2 x) (+ x 2))
+
 (define (simpson-integral f a b n)
-  (define (add-2 x) (+ x 2))
-  (define (def-h h)
-    (define (term k) (+ a (* k h)))
-    (* (+
-         (term 0)
-         (* 4 (sum term 1 add-2 (- n 1)))
-         (* 2 (sum term 2 add-2 (- n 2)))
-         (term n)
-       )
-      (/ h 3)
+  (define h (/ (- b a) n))
+  (define (term k) (+ a (* k h)))
+  (*
+    (/ h 3)
+    (+
+      (term 0)
+      (* 4 (sum term 1 add-2 (- n 1)))
+      (* 2 (sum term 2 add-2 (- n 2)))
+      (term n)
     )
   )
-  (def-h (/ (- b a) n))
 )
 
 (define (cube x) (* x x x))
@@ -30,6 +30,7 @@
   (newline)
 )
 (newline)
+(exercise 10)
 (exercise 100)
 (exercise 1000)
 
