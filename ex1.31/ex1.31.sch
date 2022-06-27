@@ -8,6 +8,13 @@
   (iter a 1)
 )
 
+(define (product-recursive term a next b)
+  (if (> a b)
+    1
+    (* (term a) (product term (next a) next b))
+  )
+)
+
 (define (identity x) x)
 (define (inc x) (+ x 1))
 (define (add-2 x) (+ x 2))
