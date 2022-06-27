@@ -14,6 +14,3 @@ b.  If your product procedure generates a recursive process, write one that gene
 
 ###
 
-integral of cube with 10 iterations are: 1/4
-integral of cube with 100 iterations are: 1/4
-integral of cube with 1000 iterations are: 1/4
