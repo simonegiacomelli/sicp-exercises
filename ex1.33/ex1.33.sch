@@ -53,18 +53,31 @@
 (define (prime? n) (fast-prime? n 100))
 
 ; -----------------------------------------------------------------------------
+; ------- gcd
+
+(define (gcd a b)
+  (if (= b 0)
+    a
+    (gcd b (remainder a b))
+  )
+)
+; -------
+
+(define (part-b n)
+  (define (gcd-one b) (= 1 (gcd n b)))
+  (mul identity 1 inc (- n 1) gcd-one)
+)
 
 
 (define (print msg val)
-  (display "\n\n")
-  (display msg)
-  (display " = ")
-  (display val)
   (newline)
+  (display msg)
+  (display " -> ")
+  (display val)
 )
 
+(newline)
 (print "a) sum of the squares of primes, interval [3 11]" (sum square 3 inc 11 prime?))
-(print "b) product of all the positive integers less than n that are relatively prime to n"
- (display "TODO")
-)
+(print "b) product of all the positive integers less than n that are relatively prime to n, n=8" (part-b 8))
+(newline)
 (exit)
