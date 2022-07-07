@@ -1,0 +1,24 @@
+MIT/GNU Scheme running under GNU/Linux
+Type `^C' (control-C) followed by `H' to obtain information about interrupts.
+
+Copyright (C) 2019 Massachusetts Institute of Technology
+This is free software; see the source for copying conditions. There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Image saved on Thursday September 5, 2019 at 11:51:46 AM
+  Release 10.1.10   || Microcode 15.3 || Runtime 15.7 || SF 4.41
+  LIAR/x86-64 4.118
+;Loading "ex1.27.sch"...
+
+Processing the Fermat test on Carmichael number n=561 for every a < n... it passed all fermat test with a < n!
+Processing the Fermat test on Carmichael number n=1105 for every a < n... it passed all fermat test with a < n!
+Processing the Fermat test on Carmichael number n=1729 for every a < n... it passed all fermat test with a < n!
+Processing the Fermat test on Carmichael number n=2465 for every a < n... it passed all fermat test with a < n!
+Processing the Fermat test on Carmichael number n=2821 for every a < n... it passed all fermat test with a < n!
+Processing the Fermat test on Carmichael number n=6601 for every a < n... it passed all fermat test with a < n!
+
+
+done
+;... aborted
+
+Post proelium, praemium.

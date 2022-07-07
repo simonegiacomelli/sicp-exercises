@@ -1,0 +1,7 @@
+See question at https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-12.html
+
+###
+
+integral of cube with 10 iterations are: 1/4
+integral of cube with 100 iterations are: 1/4
+integral of cube with 1000 iterations are: 1/4
