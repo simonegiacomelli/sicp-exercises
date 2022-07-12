@@ -1,0 +1,32 @@
+(define (cont-frac-iterative n d k)
+  (define (cf i a)
+    (if (= i 0)
+      a
+      (cf (- i 1) (/ (n i) (+ a (d i))))
+    )
+  )
+  (cf k 0)
+)
+(define (divisible x n) (= (remainder x n) 0))
+
+(define (e-2)
+  (define (di i)
+    (let ((l (+ i 1)))
+      (if (divisible l 3)
+        (* (/ l 3) 2)
+        1
+      ))
+  )
+  (cont-frac-iterative
+   (lambda (i) 1)
+   (lambda (i) (di i))
+   99
+  )
+)
+(newline)
+(newline)
+(display "e=")
+(display (+ (e-2) 2.0))
+(newline)
+(newline)
+(exit)
