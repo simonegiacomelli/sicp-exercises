@@ -5,3 +5,33 @@ Exercise 1.41.  Define a procedure double that takes a procedure of one argument
 ###
 
 21
+
+Some explanation about the statement (((double (double double)) inc) 5)
+Let's start with the innermost statement.
+
+1 (double double)
+
+It's expansion is:
+(lambda (x) (double (double x)))
+(lambda (x) (f      (f      x)))
+
+2 (double (double double))
+
+Following the previous step, the expansion is:
+(lambda (x) ((lambda (x) (double (double x))) ((lambda (x) (double (double x))) x)))
+(lambda (x) ( f                               ( f                               x)))
+
+Simplified:
+(lambda (x) (double (double (double (double x))))) # I will not use this in the following expansions,
+
+3 ((double (double double)) inc)
+((lambda (x)   ((lambda (x) (double (double x))) ((lambda (x) (double (double x))) x  ))) inc)
+((lambda (x)   ( f                               ( f                               x  ))) inc)
+
+((lambda (inc) ((lambda (x) (double (double x))) ((lambda (x) (double (double x  ))) inc))) inc)
+
+((lambda (inc) ((lambda (x) (double (double x))) ((lambda (x) (double (double inc))) inc))) inc)
+                                                                       | +2
+                                                               | +4
+                                     | +8
+                             | +16
