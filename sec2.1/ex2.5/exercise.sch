@@ -1,0 +1,27 @@
+(define (cons-int x y) (* (expt 2 x) (expt 3 y)))
+
+(define (gcd a b) (if (= b 0) a (gcd b (remainder a b))))
+(define (decompose-int z base)
+  (define (iter a x)
+;    (display (format "z=~a base=~a a=~a x=~a\n" z base a x))
+    (if (= 0 (remainder x base)) (iter (+ a 1) (/ x base)) a ))
+  (iter 0 z)
+  )
+(define (car-int z) (decompose-int z 2))
+(define (cdr-int z) (decompose-int z 3))
+
+(load "../../lib/format.sch")
+
+(define (test a b)
+  (display (format "car-int=~a cdr-int=~a\n" a b))
+  (let ((p (cons-int a b)))
+    (display (format "p=~a\n" p))
+    (display (format "car-int=~a\n" (car-int p)))
+    (display (format "cdr-int=~a\n" (cdr-int p)))
+    )
+  )
+(newline)
+(test 5 4)
+(test 512 81)
+
+(exit)
